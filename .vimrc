@@ -89,8 +89,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 set list 
 set listchars=tab:>- 
 " Use tab and shift-tab to cycle through windows.
-nnoremap <Tab> <C-W>w
-nnoremap <S-Tab> <C-W>W
+" nnoremap <Tab> <C-W>w
+" nnoremap <S-Tab> <C-W>W
 set incsearch
 set ignorecase
 set smartcase
@@ -120,6 +120,8 @@ noremap <leader>y "*y<CR>
 noremap <leader>p "*p<CR>
 noremap <leader>Y "+y<CR>
 noremap <leader>P "+p<CR>
+" remove icon toolbar
+set guioptions-=T  
 " nmap j gj
 " nmap k gk
 " To ignore plugin indent changes, instead use:
