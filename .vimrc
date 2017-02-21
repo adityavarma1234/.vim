@@ -29,6 +29,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-ragtag'
 Plugin 'ngmy/vim-rubocop'
 " Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
@@ -80,6 +81,7 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype erb tb=4 sts=4 sw=4
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:indentLine_setColors = 0
 let g:indentLine_concealcursor = 'inc'
