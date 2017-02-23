@@ -88,6 +88,7 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 let g:indentLine_color_gui = '#A4E57E'
 let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ragtag_global_maps = 1
 set list 
 set listchars=tab:>- 
 " Use tab and shift-tab to cycle through windows.
