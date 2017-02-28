@@ -123,8 +123,10 @@ noremap <leader>y "*y<CR>
 noremap <leader>p "*p<CR>
 noremap <leader>Y "+y<CR>
 noremap <leader>P "+p<CR>
-" remove icon toolbar
-set guioptions-=T  
+set guioptions-=T " remove icon toolbar
+set guioptions-=m " remove menubar
+set guioptions-=r " remove right-hand scroll bar
+set guioptions-=L " remove left-hand scroll bar
 " nmap j gj
 " nmap k gk
 " To ignore plugin indent changes, instead use:
