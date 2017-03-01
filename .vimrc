@@ -46,6 +46,8 @@ Plugin 'alvan/vim-closetag'
 Plugin 'taglist.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set exrc
@@ -108,10 +110,10 @@ else
   set undofile
 endif
 " Make CTRLP enter open files in new tab
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+" let g:ctrlp_prompt_mappings = {
+    "\ 'AcceptSelection("e")': ['<c-t>'],
+    "\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    "\ }
 " Open definition in new tab or new vertical split when using ctrP
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
@@ -127,6 +129,16 @@ set guioptions-=T " remove icon toolbar
 set guioptions-=m " remove menubar
 set guioptions-=r " remove right-hand scroll bar
 set guioptions-=L " remove left-hand scroll bar
+" Smarter tabline vim-airline
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='dark'
+" File names like *.xml, *.html, *.xhtml, ...
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 " nmap j gj
 " nmap k gk
 " To ignore plugin indent changes, instead use:
