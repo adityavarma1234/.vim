@@ -46,6 +46,8 @@ Plugin 'alvan/vim-closetag'
 Plugin 'taglist.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'mattn/emmet-vim'
+Plugin 'sjl/gundo.vim'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
@@ -64,6 +66,7 @@ let mapleader=','
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 map <leader>e :NERDTreeToggle<CR>
+map <leader>f :NERDTreeFind<CR>
 nmap <leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
 map <leader>t :TlistToggle<CR>
 map <C-F12> :!ctags -R --exclude=.git --exclude=logs --exclude=doc .<CR>
@@ -82,8 +85,8 @@ set background=dark
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
-autocmd Filetype erb tb=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype erb setlocal tb=2 sts=2 sw=2
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:indentLine_setColors = 0
 let g:indentLine_concealcursor = 'inc'
@@ -103,6 +106,7 @@ set hlsearch
 nnoremap \l :setlocal number!<CR>
 nnoremap \q :nohlsearch<CR>
 nnoremap \o :set paste!<CR>
+inoremap jk <esc>
 if has("vms")
   set nobackup
 else
@@ -117,6 +121,8 @@ endif
 " Open definition in new tab or new vertical split when using ctrP
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
 " custom ignores
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip   
 
@@ -125,6 +131,9 @@ noremap <leader>y "*y<CR>
 noremap <leader>p "*p<CR>
 noremap <leader>Y "+y<CR>
 noremap <leader>P "+p<CR>
+" ctrl + s to save files
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
 set guioptions-=T " remove icon toolbar
 set guioptions-=m " remove menubar
 set guioptions-=r " remove right-hand scroll bar
@@ -137,6 +146,7 @@ set guioptions-=L " remove left-hand scroll bar
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 "let g:airline_theme='dark'
+"let g:airline#extensions#tabline#enabled = 1
 " File names like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 " display incomplete command in the lower right corner of vim window
@@ -152,6 +162,7 @@ set showcmd
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
