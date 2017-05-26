@@ -103,10 +103,16 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nnoremap \l :setlocal number!<CR>
-nnoremap \q :nohlsearch<CR>
+nnoremap <leader>l :setlocal number!<CR>
+nnoremap <leader>q :nohlsearch<CR>
 nnoremap \o :set paste!<CR>
+nnoremap <leader>gs :Gstatus<CR>
 inoremap jk <esc>
+" Shortcuts for moving between tabs.
+" Alt-j to move to the tab to the left
+noremap <A-j> gT
+" Alt-k to move to the tab to the right
+noremap <A-k> gt
 if has("vms")
   set nobackup
 else
@@ -132,7 +138,7 @@ noremap <leader>p "*p<CR>
 noremap <leader>Y "+y<CR>
 noremap <leader>P "+p<CR>
 " ctrl + s to save files
-nmap <c-s> :w<CR>
+noremap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 set guioptions-=T " remove icon toolbar
 set guioptions-=m " remove menubar
