@@ -48,6 +48,9 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'Raimondi/delimitMate'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
@@ -71,6 +74,9 @@ nmap <leader>r :NERDTreeFocus<cr> \| R \| <c-w><c-p>
 map <leader>t :TlistToggle<CR>
 map <C-F12> :!ctags -R --exclude=.git --exclude=logs --exclude=doc .<CR>
 au BufRead,BufNewFile *.rb setlocal tags+=~/.vim/tags/ruby_and_gems
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
