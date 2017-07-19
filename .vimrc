@@ -11,6 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'kana/vim-textobj-entire'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -48,11 +50,11 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
-Plugin 'vim-scripts/YankRing.vim'
+"Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'Raimondi/delimitMate'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set exrc
@@ -65,6 +67,7 @@ set number
 syntax on
 set tags+=./tags;
 set foldlevel=1
+set showmatch
 let mapleader=','
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
@@ -85,6 +88,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_ruby_checkers = ['rubocop']
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
 set expandtab
 set autoindent
 set background=dark
@@ -151,14 +156,14 @@ set guioptions-=m " remove menubar
 set guioptions-=r " remove right-hand scroll bar
 set guioptions-=L " remove left-hand scroll bar
 "Smarter tabline vim-airline
-"let g:airline_section_b = '%{strftime("%c")}'
-"let g:airline_section_y = 'BN: %{bufnr("%")}'
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline_theme='dark'
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='dark'
+let g:airline#extensions#tabline#enabled = 1
 " File names like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 " display incomplete command in the lower right corner of vim window
@@ -178,3 +183,5 @@ set showcmd
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" Reopen previously opened file
+nnoremap <Leader><Leader> :e#<CR>
