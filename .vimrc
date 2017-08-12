@@ -30,6 +30,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
+" fuzzy finder for functions
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-ragtag'
 Plugin 'ngmy/vim-rubocop'
@@ -119,11 +121,6 @@ nnoremap <leader>q :nohlsearch<CR>
 nnoremap \o :set paste!<CR>
 nnoremap <leader>gs :Gstatus<CR>
 inoremap jk <esc>
-" Shortcuts for moving between tabs.
-" Alt-j to move to the tab to the left
-noremap <A-j> gT
-" Alt-k to move to the tab to the right
-noremap <A-k> gt
 if has("vms")
   set nobackup
 else
@@ -136,12 +133,16 @@ endif
     "\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     "\ }
 " Open definition in new tab or new vertical split when using ctrP
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_working_path_mode = 0
 " custom ignores
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip   
+
+" ctrl p to fuzzy file finder
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Keymaps for system copy and paste 
 noremap <leader>y "*y<CR>
@@ -156,19 +157,21 @@ set guioptions-=m " remove menubar
 set guioptions-=r " remove right-hand scroll bar
 set guioptions-=L " remove left-hand scroll bar
 "Smarter tabline vim-airline
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+"let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='dark'
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='luna'
+let g:Powerline_symbols='fancy'
+"let g:airline#extensions#tabline#enabled = 1
 " File names like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 " display incomplete command in the lower right corner of vim window
 set showcmd
-
+"ctrlpfunky ctrl r for method search
+nnoremap <Leader>s :CtrlPFunky<CR>
 " nmap j gj
 " nmap k gk
 " To ignore plugin indent changes, instead use:
@@ -185,3 +188,24 @@ set showcmd
 " Put your non-Plugin stuff after this line
 " Reopen previously opened file
 nnoremap <Leader><Leader> :e#<CR>
+nnoremap <Leader>w :bd<CR>
+iabbrev bp binding.pry
+iabbrev bph <% binding.pry %>
+iabbrev jd debugger; 
+
+" switch between buffers
+":nnoremap <C-Tab> :bnext<CR>
+":nnoremap <C-S-Tab> :bprevious<CR>
+noremap <A-j> :bnext<CR>
+noremap <A-k> :bprevious<CR>
+
+" Shortcuts for moving between tabs.
+" Alt-j to move to the tab to the left
+"noremap <A-j> gT
+" Alt-k to move to the tab to the right
+"noremap <A-k> gt
+
+" set default working directory in vim
+cd /home/aditya/workspace/gor/gor_refactored
+" set color column to 80
+set colorcolumn=80
