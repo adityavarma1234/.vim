@@ -210,4 +210,6 @@ cd /home/aditya/workspace/gor/gor_refactored
 " set color column to 80
 set colorcolumn=80
 " for ctrl-a and ctrl-x escape octal numbers
+" treat all numerals as decimals even if they are
+" appended with zero
 set nrformats=
