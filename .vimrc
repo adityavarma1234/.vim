@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -101,6 +102,8 @@ autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype erb setlocal tb=2 sts=2 sw=2
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+" CTRLP local working directory set as current file nearest git ancestor
+let g:ctrlp_working_path_mode = 'ra'
 let g:indentLine_setColors = 0
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
@@ -213,3 +216,7 @@ set colorcolumn=80
 " treat all numerals as decimals even if they are
 " appended with zero
 set nrformats=
+" set global maps for rag tag vim
+let g:ragtag_global_maps = 1
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
