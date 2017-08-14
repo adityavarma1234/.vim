@@ -209,3 +209,5 @@ noremap <A-k> :bprevious<CR>
 cd /home/aditya/workspace/gor/gor_refactored
 " set color column to 80
 set colorcolumn=80
+" for ctrl-a and ctrl-x escape octal numbers
+set nrformats=
