@@ -109,7 +109,6 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 let g:indentLine_color_gui = '#A4E57E'
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:ragtag_global_maps = 1
 set list 
 set listchars=tab:>- 
 " Use tab and shift-tab to cycle through windows.
@@ -153,8 +152,8 @@ noremap <leader>p "*p<CR>
 noremap <leader>Y "+y<CR>
 noremap <leader>P "+p<CR>
 " ctrl + s to save files
-noremap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
+noremap <leader>s :w<CR>
+imap <leader>s <Esc>:w<CR>a
 set guioptions-=T " remove icon toolbar
 set guioptions-=m " remove menubar
 set guioptions-=r " remove right-hand scroll bar
@@ -174,7 +173,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 " display incomplete command in the lower right corner of vim window
 set showcmd
 "ctrlpfunky ctrl r for method search
-nnoremap <Leader>s :CtrlPFunky<CR>
+nnoremap <Leader>p :CtrlPFunky<CR>
 " nmap j gj
 " nmap k gk
 " To ignore plugin indent changes, instead use:
