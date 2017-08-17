@@ -220,3 +220,8 @@ set nrformats=
 let g:ragtag_global_maps = 1
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
+" set history to 200 lines
+set history=200
+" in command line mode set c-p and c-n to map up and down arrows
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
