@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
@@ -97,11 +98,11 @@ let g:yankring_replace_n_nkey = '<m-n>'
 set expandtab
 set autoindent
 set background=dark
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
+"autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype erb setlocal tb=2 sts=2 sw=2
+"autocmd Filetype erb setlocal tb=2 sts=2 sw=2
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 " CTRLP local working directory set as current file nearest git ancestor
 let g:ctrlp_working_path_mode = 'ra'
@@ -225,3 +226,8 @@ set history=200
 " in command line mode set c-p and c-n to map up and down arrows
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+" Buffer mappings
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
