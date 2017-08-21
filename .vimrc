@@ -15,6 +15,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/tpope-vim-abolish'
+Plugin 'tpope/vim-bundler'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -230,3 +231,5 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+" reverse search a character remap , to \
+noremap \ ,
