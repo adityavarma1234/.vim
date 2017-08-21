@@ -14,6 +14,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/tpope-vim-abolish'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 " plugin from http://vim-scripts.org/vim/scripts.html
