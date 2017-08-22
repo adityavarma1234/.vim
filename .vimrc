@@ -50,7 +50,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
-Plugin 'alvan/vim-closetag'
+"Plugin 'alvan/vim-closetag'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'taglist.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-ruby/vim-ruby'
@@ -99,7 +100,7 @@ let g:yankring_replace_n_nkey = '<m-n>'
 set expandtab
 set autoindent
 set background=dark
-"autocmd Filetype html setlocal ts=2 sts=2 sw=2
+" autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
