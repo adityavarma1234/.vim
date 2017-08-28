@@ -17,6 +17,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-bundler'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
+" Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'FooSoft/vim-argwrap'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -236,3 +238,9 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 " reverse search a character remap , to \
 noremap \ ,
+" argument wrap extension
+nnoremap <silent> <leader>a :ArgWrap<CR>
+" compile for c++
+map <F5> :<C-U>!g++ -O2 -DLOCAL -std=c++11 -Wall -Wextra -Wno-unused-result -static %:r.cc -o %:r<CR>
+" run for c++
+map <F9> :<C-U>!./%:t:r<CR>
