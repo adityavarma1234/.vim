@@ -244,3 +244,8 @@ nnoremap <silent> <leader>a :ArgWrap<CR>
 map <F5> :<C-U>!g++ -O2 -DLOCAL -std=c++11 -Wall -Wextra -Wno-unused-result -static %:r.cc -o %:r<CR>
 " run for c++
 map <F9> :<C-U>!./%:t:r<CR>
+" search and replace vim example
+" :Ack FoobarQuux
+" :Qargs
+" :argdo %s/FoobarQuux/Cranberries/gc
+" :argdo update
