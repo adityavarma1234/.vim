@@ -107,7 +107,7 @@ set background=dark
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-"autocmd Filetype erb setlocal tb=2 sts=2 sw=2
+autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 " CTRLP local working directory set as current file nearest git ancestor
 let g:ctrlp_working_path_mode = 'ra'
@@ -168,12 +168,15 @@ set guioptions-=L " remove left-hand scroll bar
 "Smarter tabline vim-airline
 "let g:airline_section_b = '%{strftime("%c")}'
 "let g:airline_section_y = 'BN: %{bufnr("%")}'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+" let g:airline#extensions#tabline#enabled = 1
+" Show just the file name
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='luna'
-let g:Powerline_symbols='fancy'
+" let g:airline_theme='luna'
+" let g:Powerline_symbols='fancy'
 "let g:airline#extensions#tabline#enabled = 1
 " File names like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
@@ -205,14 +208,14 @@ iabbrev jd debugger;
 " switch between buffers
 ":nnoremap <C-Tab> :bnext<CR>
 ":nnoremap <C-S-Tab> :bprevious<CR>
-noremap <A-j> :bnext<CR>
-noremap <A-k> :bprevious<CR>
+" noremap <A-j> :bnext<CR>
+" noremap <A-k> :bprevious<CR>
 
 " Shortcuts for moving between tabs.
 " Alt-j to move to the tab to the left
-"noremap <A-j> gT
+noremap <A-j> gT
 " Alt-k to move to the tab to the right
-"noremap <A-k> gt
+noremap <A-k> gt
 
 " set default working directory in vim
 cd /home/aditya/workspace/gor/gor_refactored
