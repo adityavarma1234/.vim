@@ -66,6 +66,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'mnick/vim-pomodoro'
+Plugin 'pydave/AsyncCommand'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set exrc
@@ -251,3 +253,14 @@ map <F9> :<C-U>!./%:t:r<CR>
 " :Qargs
 " :argdo %s/FoobarQuux/Cranberries/gc
 " :argdo update
+" Duration of a pomodoro in minutes (default: 25)
+let g:pomodoro_time_work = 20
+
+" Duration of a break in minutes (default: 5)
+let g:pomodoro_time_slack = 10 
+
+" Log completed pomodoros, 0 = False, 1 = True (default: 0)
+let g:pomodoro_do_log = 1 
+
+" Path to the pomodoro log file (default: /tmp/pomodoro.log)
+let g:pomodoro_log_file = "/tmp/pomodoro.log" 
