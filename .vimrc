@@ -70,8 +70,6 @@ Plugin 'altercation/vim-colors-solarized.git'
 call vundle#end()            " required
 set exrc
 filetype plugin indent on    " required
-let g:gruvbox_italic=1
-let g:gruvbox_termcolors=16
 colorscheme gruvbox
 autocmd!
 set number
