@@ -266,3 +266,5 @@ let g:pomodoro_do_log = 1
 
 " Path to the pomodoro log file (default: /tmp/pomodoro.log)
 let g:pomodoro_log_file = "/tmp/pomodoro.log" 
+" show status line always
+set laststatus=2
