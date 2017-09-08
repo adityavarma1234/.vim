@@ -110,6 +110,7 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 " CTRLP local working directory set as current file nearest git ancestor
 let g:ctrlp_working_path_mode = 'ra'
