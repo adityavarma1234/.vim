@@ -66,6 +66,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'junegunn/vader.vim'
 Plugin 'mnick/vim-pomodoro'
 Plugin 'pydave/AsyncCommand'
 " All of your Plugins must be added before the following line
