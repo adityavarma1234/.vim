@@ -90,8 +90,8 @@ map <leader>t :TlistToggle<CR>
 map <C-F12> :!ctags -R --exclude=.git --exclude=logs --exclude=doc .<CR>
 au BufRead,BufNewFile *.rb setlocal tags+=~/.vim/tags/ruby_and_gems
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <space>ev :e $MYVIMRC<CR>
+nmap <silent> <space>sv :so $MYVIMRC<CR>
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
