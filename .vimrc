@@ -65,6 +65,7 @@ Plugin 'vim-scripts/mru.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized.git'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set exrc
