@@ -17,7 +17,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-bundler'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
-" Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'FooSoft/vim-argwrap'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -69,6 +69,8 @@ Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'junegunn/vader.vim'
 Plugin 'mnick/vim-pomodoro'
 Plugin 'pydave/AsyncCommand'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set exrc
@@ -221,7 +223,7 @@ noremap <A-j> gT
 noremap <A-k> gt
 
 " set default working directory in vim
-cd /home/aditya/workspace/gor/gor_refactored
+" cd /home/aditya/workspace/gor/gor_refactored
 " set color column to 80
 set colorcolumn=80
 " for ctrl-a and ctrl-x escape octal numbers
