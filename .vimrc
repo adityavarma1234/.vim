@@ -253,10 +253,8 @@ map <F5> :<C-U>!g++ -O2 -DLOCAL -std=c++11 -Wall -Wextra -Wno-unused-result -sta
 " run for c++
 map <F9> :<C-U>!./%:t:r<CR>
 " search and replace vim example
-" :Ack FoobarQuux
-" :Qargs
-" :argdo %s/FoobarQuux/Cranberries/gc
-" :argdo update
+" :Ack foo
+" :cdo s/foo/bar/g | update
 " Duration of a pomodoro in minutes (default: 25)
 let g:pomodoro_time_work = 20
 
